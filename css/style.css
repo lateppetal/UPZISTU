@@ -1,0 +1,315 @@
+:root {
+  --primary: #009a46;
+  --bg: #7c7c7c;
+  --font: #2e2e2e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  color: #fff;
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(255, 255, 255);
+  border-bottom: 1px solid var(--font);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2e2e2e;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+  color: var(--font);
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .calculator .calculator-zakat {
+  display: inline-block;
+  color: #dedede;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  background-color: #009a46;
+  border-radius: 0.5rem;
+}
+
+.navbar .navbar-extra a {
+  color: var(--font);
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  width: 100%;
+  transition: 1s;
+}
+
+.hero img {
+  width: 100%;
+  padding: 8rem 1% 1.4rem;
+  border-radius: 2%;
+}
+
+.wrapper {
+  width: 95%;
+  margin: auto;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#slide-1:target ~ .hero {
+  margin-left: 0px;
+}
+#slide-2:target ~ .hero {
+  margin-left: -100%;
+}
+#slide-3:target ~ .hero {
+  margin-left: -200%;
+}
+#slide-4:target ~ .hero {
+  margin-left: -300%;
+}
+
+.navigation a {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: #dedede;
+  font-size: 0px;
+  border-radius: 50%;
+  margin: 3px;
+}
+
+.navigation a:hover {
+  background-color: #009a46;
+  transition: 1s;
+}
+
+.navigation {
+  position: absolute;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+/* News Section */
+.news {
+  padding: 8rem 7% 1.4rem;
+}
+
+.news h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin: 1rem;
+  color: #009a46;
+}
+
+.news .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.news .row .news-card {
+  width: 30%;
+  text-align: left;
+  border: 1px solid #2e2e2e;
+  margin: 0 1rem 2rem;
+}
+
+.news .row .news-card .img {
+  width: 100%;
+  height: auto;
+}
+
+.news .row .news-card .judul {
+  color: #333;
+  max-width: 30rem;
+  text-align: justify;
+  margin: auto 1rem;
+}
+
+.news .row .news-card .tanggal {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 8px;
+  text-align: justify;
+  margin: auto 1rem;
+  max-width: 30rem;
+}
+
+.news .row .news-card .deskripsi {
+  color: #555;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  max-width: 30rem;
+  margin: auto 1rem;
+  text-align: justify;
+}
+
+.news .row .news-card .selengkapnya {
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin: auto;
+  max-width: 30rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+
+.news .row .news-card .selengkapnya:hover {
+  text-decoration: underline;
+}
+
+.news .row .berita-lain {
+  display: inline-block;
+  color: #dedede;
+  padding: 0.5rem 2rem;
+  font-size: 1.4rem;
+  background-color: #009a46;
+  border-radius: 0.5rem;
+}
+
+footer {
+  background-color: #333;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 3rem;
+}
+
+footer .socials {
+  padding: 1rem 0;
+}
+
+footer .socials a,
+footer .links a {
+  color: white;
+  margin: 1rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+  color: #009a46;
+}
+
+footer .links {
+  margin-bottom: 1.4rem;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+}
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 758px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav,
+  .calculator {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #2e2e2e;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: #fff;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+}
+
+/* Mobile phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
