@@ -15,7 +15,7 @@
 body {
   font-family: "Poppins", sans-serif;
   background-color: #fff;
-  color: #fff;
+  color: #333;
 }
 
 /* Navbar */
@@ -255,6 +255,126 @@ footer .links {
 
 footer .credit {
   font-size: 0.8rem;
+}
+
+/* Calculator Section */
+main {
+  display: block;
+}
+
+div {
+  display: block;
+}
+.iam-content {
+  flex: 1 1 0%;
+}
+
+.iam-content .page-header {
+  padding: 8rem 1% 1.4rem;
+  margin: auto;
+}
+
+.iam-content .page-header .container {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.iam-content .page-header .container .section-title {
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.iam-content .page-header .container .section-title h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.iam-content .container {
+  padding: 2rem 8rem;
+  margin: auto;
+}
+
+.iam-content .container .calculator .category {
+  border-bottom-width: 1px;
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.iam-content .container .calculator .category a {
+  color: #333;
+  padding: 1rem 0;
+  border-bottom-width: 1px;
+  margin-right: 1rem;
+}
+
+.iam-content .container .calculator .judul {
+  line-height: 1.75rem;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+.iam-content .container .calculator .deskripsi {
+  margin-bottom: 1rem;
+  max-width: 40rem;
+}
+
+.iam-content .container .calculator .mb-4 {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.iam-content .container .calculator .profesi .form .mb-4 .pendapatan {
+  border-width: 1px;
+  border-radius: 0.375rem;
+  align-items: center;
+  display: flex;
+  border: 1px solid #2e2e2e;
+}
+
+.px-2 {
+  padding: 0 0.5rem;
+  border-right: 1px solid #2e2e2e;
+}
+
+#pendapatan,
+#pendapatanlain,
+#hutang,
+#totalharta,
+#nishab,
+#nilaizakat {
+  text-align: right;
+  padding: 0.5rem;
+  flex: 1 1 0%;
+}
+
+.nilai-zakat {
+  padding: 2rem;
+  border-width: 1px;
+  border-radius: 0.385rem;
+  border: 1px solid #2e2e2e;
+}
+
+#nilai-zakat .nilai-zakat .mb-4 .pendapatan {
+  border-width: 1px;
+  border-radius: 0.375rem;
+  align-items: center;
+  display: flex;
+  border: 1px solid #2e2e2e;
+}
+
+.salurkan-zakat {
+  margin-top: 1rem;
+}
+
+.salurkan-zakat .button {
+  display: inline-block;
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  background-color: #009a46;
+  border-radius: 0.375rem;
 }
 /* Media Queries */
 

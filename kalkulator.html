@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator Zakat - UPZISTU</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- My Style -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">UPZIS<span>TU</span></a>
+
+      <div class="navbar-nav">
+        <a href="#home">Home</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#info">Info</a>
+        <a href="#program">Program</a>
+      </div>
+
+      <div class="calculator">
+        <a href="kalkulator.html" class="calculator-zakat">Kalkulator Zakat</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="search"><i data-feather="search"></i></a>
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Main Start  -->
+    <main class="iam-content">
+      <div class="page-header">
+        <div class="container">
+          <div class="section-title">
+            <h2>Kalkulator Zakat</h2>
+            <p>Yuk hitung berapa zakat yang harus kamu keluarkan tahun ini</p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="calculator">
+          <nav class="category">
+            <a href="#">Profesi</a>
+            <!-- <a href="#">Harta</a> -->
+          </nav>
+          <div class="profesi">
+            <div class="form">
+              <div class="komponen-zakat">
+                <h2 class="judul">Komponen Zakat</h2>
+                <p class="deskripsi">
+                  Silahkan diisi dengan pendapatan bulanan anda. Perhitungan
+                  nishab tetap didasarkan pada nishab emas 85gr yang dihitung
+                  bulanan.
+                </p>
+                <label for="pendapatan" class="mb-4">
+                  <span class="mb-2">Pendapatan (Gaji bulanan)</span>
+                  <div class="pendapatan">
+                    <span class="px-2">Rp</span>
+                    <input
+                      type="text"
+                      name="pendapatan"
+                      id="pendapatan"
+                      placeholder="0"
+                      oninput="zakatprofesi()"
+                    />
+                  </div>
+                </label>
+                <label for="pendapatanlain" class="mb-4">
+                  <span class="mb-2">Pendapatan lain bulanan (optional)</span>
+                  <div class="pendapatan">
+                    <span class="px-2">Rp</span>
+                    <input
+                      type="teks"
+                      name="pendapatanlain"
+                      id="pendapatanlain"
+                      pattern="[0-9]{1,3}(\.[0-9]{3}*)"
+                      placeholder="0"
+                      oninput="zakatprofersi()"
+                    />
+                  </div>
+                </label>
+                <label for="hutang" class="mb-4">
+                  <span class="mb-2">Hutang (optional)</span>
+                  <div class="pendapatan">
+                    <span class="px-2">Rp</span>
+                    <input
+                      type="text"
+                      name="hutang"
+                      id="hutang"
+                      placeholder="0"
+                      oninput="zakatprofesi()"
+                    />
+                  </div>
+                </label>
+              </div>
+            </div>
+            <div class="px-4" id="nilai-zakat">
+              <div class="nilai-zakat">
+                <form action="" method="post" class="form-nilai-zakat">
+                  <h2 class="judul">Nilai Zakat</h2>
+                  <p class="deskripsi">
+                    Berikut hasil perhitungan dan nilai zakat yang harus anda
+                    keluarkan
+                  </p>
+                  <label for="totalharta" class="mb-4">
+                    <span class="mb-2">Total Harta</span>
+                    <div class="pendapatan">
+                      <span class="px-2">Rp</span>
+                      <input
+                        type="text"
+                        name="totalharta"
+                        id="totalharta"
+                        placeholder="0"
+                        readonly
+                      />
+                    </div>
+                  </label>
+                  <label for="nishab" class="mb-4">
+                    <span class="mb-2">Nishab (per-bulan)</span>
+                    <div class="pendapatan">
+                      <span class="px-2">Rp</span>
+                      <input
+                        type="text"
+                        name="nishab"
+                        id="nishab"
+                        placeholder="6.859.394"
+                        value=""
+                        readonly
+                      />
+                    </div>
+                  </label>
+                  <label for="nilaizakat" class="mb-4">
+                    <span class="mb-2">Nilai Zakat</span>
+                    <div class="pendapatan">
+                      <span class="px-2">Rp</span>
+                      <input
+                        type="text"
+                        name="nilaizakat"
+                        id="nilaizakat"
+                        placeholder="0"
+                        value=""
+                        readonly
+                      />
+                    </div>
+                  </label>
+                  <div class="salurkan-zakat">
+                    <button type="submit" class="button">Salurkan Zakat</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Calculator Section End  -->
+    <!--Footer Start -->
+    <footer>
+      <div class="socials">
+        <a href="#"><i data-feather="instagram"></i></a>
+      </div>
+
+      <div class="links">
+        <a href="#home">Home</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#info">Info</a>
+        <a href="#program">Program</a>
+      </div>
+      <div class="credit">
+        <p>Created by UPZISTU. | &copy; 2024.</p>
+      </div>
+    </footer>
+    <!--Footer End -->
+
+    <!-- Feater Icons -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- My JavaScript -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
